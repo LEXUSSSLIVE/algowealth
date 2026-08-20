@@ -2,6 +2,8 @@
 
 Private wealth tracking for iOS: a React Native app backed by a FastAPI service. Tracks a multi-bank investment portfolio (holdings, allocations, per-account balances), live market quotes and watchlists, and ships a built-in blog with a web admin panel.
 
+https://github.com/user-attachments/assets/4e0441f9-bf3b-4ed4-8fa1-510f609b6379
+
 ## Features
 
 **Mobile app (Expo / React Native)**
