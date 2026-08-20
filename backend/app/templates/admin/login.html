@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlgoWealth Admin — sign in</title>
+<style>
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif; background:#F7F8FA; display:flex; align-items:center; justify-content:center; min-height:100vh; }
+  .box { background:#fff; border:1px solid #E2E8F0; border-radius:16px; padding:34px; width:360px; }
+  h1 { font-size:20px; margin-bottom:6px; } h1 span { color:#2C67FF; }
+  p.err { color:#EB3945; font-size:13px; margin-bottom:8px; }
+  label { display:block; font-size:13px; color:#787878; margin:12px 0 4px; }
+  input { width:100%; padding:11px 13px; border:1px solid #E2E8F0; border-radius:22px; font-size:15px; }
+  button { width:100%; margin-top:18px; background:#2C67FF; color:#fff; border:0; border-radius:22px; padding:12px; font-size:16px; cursor:pointer; }
+</style>
+</head>
+<body>
+<form class="box" method="post" action="/admin/login">
+  <h1>Algo<span>Wealth</span> Admin</h1>
+  {% if err %}<p class="err">Invalid email or password</p>{% endif %}
+  <label>Email</label>
+  <input type="email" name="email" required autofocus>
+  <label>Password</label>
+  <input type="password" name="password" required>
+  <button type="submit">Sign in</button>
+</form>
+</body>
+</html>

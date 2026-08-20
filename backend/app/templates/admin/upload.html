@@ -1,0 +1,18 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+<h1>Upload Files</h1>
+{% if msg %}<div class="msg">{{ msg }}</div>{% endif %}
+<div class="card">
+  <form method="post" action="/admin/upload" enctype="multipart/form-data">
+    <label>File (.csv)</label>
+    <input type="file" name="file" accept=".csv,text/csv" required>
+    <label>User</label>
+    <select name="user_email" required>
+      {% for u in users %}<option value="{{ u.email }}">{{ u.email }} — {{ u.group_id }}</option>{% endfor %}
+    </select>
+    <label>Date</label>
+    <input type="date" name="date">
+    <div style="margin-top:18px"><button type="submit">Upload</button></div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+Instrument;Investment category;Instrument type;Curr;Quantity / Nominal;Purch, price;Current Price;Total value USD;UNREALISED RESULT;% profit;ISIN;Bank Name;Account Name;Account ID;IBAN
+NVIDIA Corp;Equities & similar positions;Equities;USD;84379.7267;118.0000;116.284694;9812070.74;-144737.01;-1.45;US67066G1040;JPMorgan Private Bank;;84772091;-
+Alphabet Inc Class A;Equities & similar positions;Equities;USD;39377.2058;168.0000;168.217937;6623952.31;8581.74;0.13;US02079K3059;JPMorgan Private Bank;;84772091;-
+US Treasury 4.625% 15.05.2034;Bonds & similar positions;Treasury;USD;150008.4031;102.3000;102.192887;15329791.78;-16067.85;-0.10;US91282CKR11;JPMorgan Private Bank;;84772091;-
+USD Cash;Liquidity;Cash;USD;3187678.5700;1.0000;1.000000;3187678.57;0.00;0.00;;JPMorgan Private Bank;;84772091;-
+Amazon.com Inc;Equities & similar positions;Equities;USD;35626.9957;186.0000;183.143839;6524864.77;-101756.43;-1.54;US0231351067;JPMorgan Private Bank;;84772092;-
+Meta Platforms Inc;Equities & similar positions;Equities;USD;8906.7489;510.0000;515.260698;4589297.66;46855.72;1.03;US30303M1027;JPMorgan Private Bank;;84772092;-
+GS Vintage Fund IX LP;Alternative investments;Alternative;USD;4875.2731;1000.0000;999.194666;4871346.88;-3926.22;-0.08;;Goldman Sachs PWM;;55310468;-
+Eli Lilly & Co;Equities & similar positions;Equities;USD;5250.2941;780.0000;781.876005;4105078.98;9849.58;0.24;US5324571083;Goldman Sachs PWM;;55310468;-
+USD Cash;Liquidity;Cash;USD;1078185.4000;1.0000;1.000000;1078185.40;0.00;0.00;;Goldman Sachs PWM;;55310468;-
+Apple Inc;Equities & similar positions;Equities;USD;24376.3655;228.0000;231.268725;5637490.97;79679.64;1.43;US0378331005;Morgan Stanley Wealth;;90148253;-
+Apple Inc 3.85% 2043;Bonds & similar positions;Bond;USD;48752.7310;88.9000;88.740768;4326354.78;-7763.01;-0.18;US037833AL42;Morgan Stanley Wealth;;90148253;-
+USD Cash;Liquidity;Cash;USD;834421.7400;1.0000;1.000000;834421.74;0.00;0.00;;Morgan Stanley Wealth;;90148253;-
+US Treasury 4.25% 15.08.2033;Bonds & similar positions;Treasury;USD;112506.3023;98.4000;98.423407;11073253.63;2633.48;0.02;US91282CHT18;Bank of America Merrill;;33207915;-
+iShares Core US Aggregate ETF;Bonds & similar positions;Bond;USD;60003.3612;98.1000;98.065885;5884282.75;-2046.99;-0.03;US4642872265;Bank of America Merrill;;33207915;-
+SPDR S&P 500 ETF;Equities & similar positions;Equities;USD;13594.5115;545.0000;558.016645;7585963.70;176954.93;2.39;US78462F1030;Charles Schwab;;71689002;-
+Invesco QQQ Trust;Equities & similar positions;Equities;USD;8625.4832;465.0000;460.782633;3974472.86;-36376.83;-0.91;US46090E1038;Charles Schwab;;71689002;-
+USD Cash;Liquidity;Cash;USD;600033.6100;1.0000;1.000000;600033.61;0.00;0.00;;Charles Schwab;;71689002;-
+Vanguard Real Estate ETF;Equities & similar positions;Equities;USD;28126.5756;88.6000;89.716509;2523418.18;31403.59;1.26;US9229085538;Charles Schwab;;71689003;-
+US Treasury 4.0% 15.02.2034;Bonds & similar positions;Treasury;USD;73129.0965;97.6000;97.616220;7138585.94;1186.12;0.02;US91282CJZ59;Charles Schwab;;71689003;-
+Microsoft Corp;Equities & similar positions;Equities;USD;11719.4065;442.0000;442.686241;5188020.01;8042.33;0.16;US5949181045;Fidelity Investments;;60934187;-
+iShares iBoxx IG Corp Bond ETF;Bonds & similar positions;Bond;USD;43127.4159;108.7000;108.793718;4691991.94;4041.83;0.09;US4642872422;Fidelity Investments;;60934187;-
+USD Cash;Liquidity;Cash;USD;1621965.8600;1.0000;1.000000;1621965.86;0.00;0.00;;Fidelity Investments;;60934187;-
+US Treasury 4.125% 15.11.2032;Bonds & similar positions;Treasury;USD;196886.0290;97.9000;97.766966;19248949.76;-26192.48;-0.14;US91282CFV88;Citi Private Bank;;42078356;-
+Microsoft Corp 3.3% 2027;Bonds & similar positions;Bond;USD;69378.8864;96.8000;96.761384;6713197.05;-2679.15;-0.04;US594918BY93;Citi Private Bank;;42078356;-
+USD Cash;Liquidity;Cash;USD;4781517.8500;1.0000;1.000000;4781517.85;0.00;0.00;;Citi Private Bank;;42078356;-
+Berkshire Hathaway B;Equities & similar positions;Equities;USD;14063.2878;452.0000;441.836881;6213679.21;-142926.87;-2.25;US0846707026;Wells Fargo Advisors;;28569140;-
+NYC GO 4.0% 2035 Muni;Bonds & similar positions;Bond;USD;38439.6533;99.2000;99.388087;3820443.61;7230.00;0.19;US64966QCC22;Wells Fargo Advisors;;28569140;-
+Blackstone BREIT Class I;Alternative investments;Alternative;USD;581282.5619;14.2000;14.264813;8291887.25;37674.87;0.46;;Northern Trust;;19402877;-
+Private Credit Note 8.5% 2028;Bonds & similar positions;OTC Bond;USD;82504.6217;100.0000;99.679486;8224018.29;-26443.88;-0.32;;Northern Trust;;19402877;-
+USD Cash;Liquidity;Cash;USD;918801.4700;1.0000;1.000000;918801.47;0.00;0.00;;Northern Trust;;19402877;-
+Visa Inc Class A;Equities & similar positions;Equities;USD;19688.6029;275.0000;271.313334;5341780.50;-72585.30;-1.34;US92826C8394;Raymond James;;66120593;-
+UnitedHealth Group Inc;Equities & similar positions;Equities;USD;6937.8886;505.0000;512.714329;3557154.90;53521.15;1.53;US91324P1021;Raymond James;;66120593;-
+Exxon Mobil Corp;Equities & similar positions;Equities;USD;31876.7857;112.0000;109.603618;3493811.04;-76388.96;-2.14;US30231G1022;Raymond James;;66120593;-

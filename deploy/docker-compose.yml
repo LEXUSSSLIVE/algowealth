@@ -1,0 +1,16 @@
+services:
+  api:
+    build: ./backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      ALGOWEALTH_DB: /data/app.db
+      ALGOWEALTH_GO_API: http://host.docker.internal:8088
+      ALGOWEALTH_GOAPI_DB: /goapi-data/database.db
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:8100:8100"
+    volumes:
+      - ./data:/data
+      - /var/www/finance_track_server/data:/goapi-data

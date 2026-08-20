@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.expo/
+dist/
+.env
+*.db
+!deploy/demo/app.db

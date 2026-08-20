@@ -1,0 +1,29 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+<h1>Password reset requests</h1>
+{% if new_password %}
+<div class="pw">New password for <b>{{ password_for }}</b> (shown once): <code>{{ new_password }}</code></div>
+{% endif %}
+<div class="card">
+  <table>
+    <tr><th>Email</th><th>When</th><th>Status</th><th></th></tr>
+    {% for r in requests %}
+    <tr>
+      <td>{{ r.email }}</td>
+      <td style="font-size:12px">{{ r.created_at }}</td>
+      <td>{{ '✅ handled' if r.handled else '⏳ pending' }}</td>
+      <td>
+        {% if not r.handled %}
+        <form method="post" action="/admin/resets/handle">
+          <input type="hidden" name="req_id" value="{{ r.id }}">
+          <input type="hidden" name="email" value="{{ r.email }}">
+          <button type="submit">Reset password</button>
+        </form>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+    {% if not requests %}<tr><td colspan="4" style="color:#787878">No requests</td></tr>{% endif %}
+  </table>
+</div>
+{% endblock %}

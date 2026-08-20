@@ -1,0 +1,54 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+<h1>Users</h1>
+{% if msg %}<div class="msg">{{ msg }}</div>{% endif %}
+{% if new_password %}
+<div class="pw">Password for <b>{{ password_for }}</b> (shown once): <code>{{ new_password }}</code></div>
+{% endif %}
+<div class="card">
+  <table>
+    <tr><th>Email</th><th>Role</th><th>group_id</th><th>Language</th><th></th></tr>
+    {% for u in users %}
+    <tr>
+      <td>{{ u.email }}</td><td>{{ u.role }}</td>
+      <td style="font-size:12px">{{ u.group_id }}</td><td>{{ u.language }}</td>
+      <td style="white-space:nowrap">
+        <form method="post" action="/admin/users/reset" style="display:inline">
+          <input type="hidden" name="email" value="{{ u.email }}">
+          <button class="ghost" type="submit">Reset pw</button>
+        </form>
+        {% if u.role != 'admin' %}
+        <form method="post" action="/admin/users/delete" style="display:inline"
+              onsubmit="return confirm('Delete {{ u.email }}?')">
+          <input type="hidden" name="email" value="{{ u.email }}">
+          <button class="danger" type="submit">Delete</button>
+        </form>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+<div class="card">
+  <h1 style="font-size:17px">Create user</h1>
+  <form method="post" action="/admin/users/create">
+    <div class="row">
+      <div><label>Email</label><input type="email" name="email" required></div>
+      <div><label>group_id (new or existing from fin_stats)</label>
+        <input type="text" name="group_id" required></div>
+      <div><label>Language</label>
+        <select name="language"><option value="ru">ru</option><option value="en">en</option></select></div>
+    </div>
+    <div style="margin-top:14px"><button type="submit">Create (password will be generated)</button></div>
+  </form>
+</div>
+<div class="card">
+  <h1 style="font-size:17px">Orphaned data</h1>
+  <p style="font-size:13px;color:#787878;margin-bottom:12px">
+    Deletes fin_stats rows whose group_id belongs to no user.</p>
+  <form method="post" action="/admin/users/purge"
+        onsubmit="return confirm('Purge orphaned rows from fin_stats? This cannot be undone.')">
+    <button class="danger" type="submit">Purge</button>
+  </form>
+</div>
+{% endblock %}

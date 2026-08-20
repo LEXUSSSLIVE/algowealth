@@ -1,0 +1,34 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+<h1>Blog</h1>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+  <div>
+    <a class="btn {% if filter %}ghost{% endif %}" href="/admin/posts" style="{% if filter %}background:transparent;color:#2C67FF;border:1px solid #2C67FF{% endif %}">All</a>
+    <a class="btn" href="/admin/posts?filter=draft" style="{% if filter!='draft' %}background:transparent;color:#2C67FF;border:1px solid #2C67FF{% endif %}">Draft</a>
+    <a class="btn" href="/admin/posts?filter=published" style="{% if filter!='published' %}background:transparent;color:#2C67FF;border:1px solid #2C67FF{% endif %}">Published</a>
+  </div>
+  <a class="btn" href="/admin/posts/new">Create Post</a>
+</div>
+<div class="card">
+  <table>
+    <tr><th>Title</th><th>Category</th><th>Status</th><th>Date</th><th></th></tr>
+    {% for p in posts %}
+    <tr>
+      <td>{{ p.title }}</td>
+      <td>{{ 'Stock ideas' if p.type=='stock_ideas' else 'Reports' }}</td>
+      <td><span class="chip {{ p.status }}">{{ p.status }}</span></td>
+      <td style="font-size:12px">{{ p.published_at or p.created_at }}</td>
+      <td style="white-space:nowrap">
+        <a class="btn ghost" style="background:transparent;color:#2C67FF;border:1px solid #2C67FF" href="/admin/posts/edit/{{ p.id }}">✏️</a>
+        <form method="post" action="/admin/posts/delete" style="display:inline"
+              onsubmit="return confirm('Delete post \u201C{{ p.title }}\u201D?')">
+          <input type="hidden" name="post_id" value="{{ p.id }}">
+          <button class="danger" type="submit">🗑</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+    {% if not posts %}<tr><td colspan="5" style="color:#787878">No posts yet</td></tr>{% endif %}
+  </table>
+</div>
+{% endblock %}
